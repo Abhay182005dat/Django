@@ -1,0 +1,24 @@
+In Django, models.py is where you define your database structure — like blueprints for the data your app will store.
+
+Think of it like this:
+If your app is a school, then models.py defines what a "Student", "Teacher", or "Course" looks like — what fields each has, how they're related, etc.
+
+✅ Why use models?
+They define your database tables in Python classes.
+
+Django uses them to automatically generate SQL tables.
+
+You interact with the database using these classes, not raw SQL.
+
+python manage.py migrate 
+
+    🔧 It applies migrations — i.e., it creates or updates your database schema (tables, columns, etc.) based on your models.py.
+    📦 Think of it like this:
+    You define your database structure using Django models.
+
+    Django keeps track of these in migration files (kind of like instructions).
+
+    migrate reads those instructions and applies them to your database.
+
+python manage.py makemigrations
+        It create migration files based on the changes you have made in your models.py
