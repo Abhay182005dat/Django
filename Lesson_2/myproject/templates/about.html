@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- static = loads the css file from the static folder -->
-    <script src = " {% static 'js/main.js' %}" defer></script> <!-- defer = wait until all pages are loaded then loads the script -->
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block title %}
+    About
+{% endblock %}
+
+{% block content %}
     <h1>About</h1>
-    <p>Check out my <a href = "/">Home</a></p>
-</body>
-</html>
+    <p>Check out my <a href = "/">Home</a> page.</p>
+{% endblock %}
+

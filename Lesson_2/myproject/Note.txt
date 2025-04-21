@@ -1,0 +1,60 @@
+✅ Using {% extends 'layout.html' %}
+This means:
+
+“This page is based on a parent template called layout.html.”
+
+Then you define only the parts that change using {% block %}:
+
+django
+Copy
+Edit
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h1>Home</h1>
+    <p>Check out my <a href="/about">About</a></p>
+{% endblock %}
+This avoids repeating boilerplate code in every page.
+
+🆚 If you wrote full HTML every time...
+You’d repeat this stuff in every HTML file:
+
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whatever</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  ...
+</body>
+</html>
+It works, but becomes hard to maintain if you ever want to change your layout, add a nav bar, update your styles, etc.
+
+✅ Benefits of {% extends %}:
+
+Without {% extends %}	                With {% extends %}
+Repetitive HTML everywhere	            Clean, reusable layout
+Hard to update in large apps	        Change one layout, affect all
+Not DRY	DRY and easier to manage
+
+
+📦 Summary:
+You use:
+
+django
+Copy
+Edit
+{% extends "layout.html" %}
+Because it lets you:
+
+Reuse base layouts
+
+Inject only the unique parts for each page
+
+Keep your project clean and scalable
+
+Let me know if you want an example of how the layout.html file should look!
