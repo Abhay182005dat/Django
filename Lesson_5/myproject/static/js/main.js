@@ -1,0 +1,1 @@
+console.log("This is console from JavaScript file");
