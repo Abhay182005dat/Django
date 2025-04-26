@@ -40,6 +40,7 @@ a{
     text-decoration: none;
     color: #81dbb8;
 }
+
 a:hover {
     opacity: .85;
 }
