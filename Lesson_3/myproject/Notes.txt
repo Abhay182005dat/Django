@@ -22,3 +22,19 @@ python manage.py migrate
 
 python manage.py makemigrations
         It create migration files based on the changes you have made in your models.py
+
+For lesson_4 orm (Object - Relational - mapping)
+    Its a bridge between you python code(objects) and your databases (tables)
+    You’d write SQL like:
+        INSERT INTO trips (name, date) VALUES ('Goa Trip', '2025-04-20');
+
+    🐍 With Django's ORM:
+        You just write Python:
+
+        trip = Trip(name='Goa Trip', date='2025-04-20')
+        trip.save()
+        python manage.py shell
+        (  from posts.models import post
+        >>> P = post()
+        >>> P.title = "My First Post !" 
+        >>> P.save())
