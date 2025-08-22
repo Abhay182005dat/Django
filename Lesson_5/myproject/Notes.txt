@@ -1,3 +1,7 @@
 Lesson_5
 
 to create username :- python manage.py createsuperuser
+
+after creating ,  you should register your model in admin.py
+from .models import Post
+admin.site.register(Post)
