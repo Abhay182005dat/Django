@@ -8,4 +8,5 @@ def posts_list(request):
     return render(request , 'posts/post_list.html' , {'posts': posts})
 
 def post_page(request, slug):
-    return HttpResponse(slug)
+    single_post = post.objects.get(slug=slug)
+    return render(request,'posts/post_page.html',{'post': single_post})
