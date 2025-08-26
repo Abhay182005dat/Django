@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static  %} <!-- load = loads the static files, which are css and js files in this case -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} <!-- block = placeholder for the title of the page, which will be replaced by the child template -->
+            Django App
+        {% endblock %} 
+    </title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- static = loads the css file from the static folder -->
+    <script src = " {% static 'js/main.js' %}" defer></script> <!-- defer = wait until all pages are loaded then loads the script -->
+</head>
+<body>  
+    <nav>
+        <a href="/">🏠</a> |        
+        <a href="/about">😊</a> |        
+        <a href="{% url 'posts:list' %}">📰</a>    
+        
+    </nav>
+    <main>
+        {%  block content  %}
+        {% endblock %}
+    </main>
+</body>
+</html>

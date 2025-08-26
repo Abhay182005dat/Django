@@ -1,0 +1,33 @@
+Lesson 6
+
+modifications in urls.py views.py layout.html
+
+Posts App URL Configuration
+1. Root URL Pattern
+
+path('' , views.posts_list , name='posts')
+
+- Matches the base URL of the posts app
+- Empty string `''` catches requests to the root URL (e.g., `/posts/`)
+- Calls the `posts_list` view function from `views.py`
+- `name='posts'` allows template referencing via `{% url 'posts' %}`
+
+### 2. Slug URL Pattern
+
+path('<slug:slug>' , views.posts_list , name='posts')
+
+- Captures URLs containing a slug parameter
+- `<slug:slug>` breakdown:
+  - First `slug`: Path converter type (allows letters, numbers, hyphens, underscores)
+  - Second `slug`: Parameter name passed to the view function
+- Example URLs:
+  - `/posts/my-first-post/`
+  - `/posts/hello-world/`
+
+### ⚠️ Important Note
+Both patterns use:
+- Same view function (`posts_list`)
+- Same name (`posts`)
+This might cause the second pattern to override the first. Consider using different names or view functions if different behavior
+
+app_name is like a keyword in django , helps you make different pages by giving names

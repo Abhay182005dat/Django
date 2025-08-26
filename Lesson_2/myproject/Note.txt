@@ -58,3 +58,6 @@ Inject only the unique parts for each page
 Keep your project clean and scalable
 
 Let me know if you want an example of how the layout.html file should look!
+
+In Django, a slug is a short label used in URLs to identify a particular resource 
+(like a blog post, product, or user) in a human-readable and SEO-friendly way.
