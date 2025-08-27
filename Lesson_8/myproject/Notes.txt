@@ -1,0 +1,32 @@
+Lesson 8,9  
+
+1. {% ... %} → Template Tags
+
+Used for logic: control flow, inheritance, loops, blocks, etc.
+
+Examples:
+
+{% extends "layout.html" %}
+{% block content %} ... {% endblock %}
+{% for item in items %} ... {% endfor %}
+
+
+Think of {% %} as “do something”.
+
+🔹 2. {{ ... }} → Template Variables / Expressions
+
+Used to output a value into the HTML.
+
+Example:
+
+<p>{{ user.username }}</p>
+
+
+→ This will render as the actual username string.
+
+In your snippet:
+
+{{ form }}
+
+
+means “Insert the HTML representation of the form object here”. Django automatically turns the form object into HTML <input> tags.
