@@ -17,8 +17,18 @@
         <a href="/">
           <span role = "img" aria-label="Home">🏠</span>
         </a> |        
-        <a href="/about">😊</a> |        
-        <a href="{% url 'posts:list' %}">📰</a>    
+        <a href="/about">
+            <span role="img" aria-label="Smile">😊</span>
+        </a> |        
+        <a href="{% url 'posts:list' %}">
+            <span role="img" aria-label="Posts">📰</span>
+        </a> |
+        <a href="{% url 'users:register' %}">
+            <span role="img" aria-label="Register">🚀</span>
+        </a> |
+        <a href="{% url 'users:login' %}">
+            <span role="img" aria-label="User Login">🔒</span>
+        </a>
         
     </nav>
     <main>

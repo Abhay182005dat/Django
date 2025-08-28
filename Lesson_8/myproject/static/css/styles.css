@@ -50,3 +50,6 @@ a:hover {
     object-fit: cover;
     border-radius: 8px;
 }
+.form-with-validation{
+    font-size: medium;
+}
