@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'weather_app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Weather App</h1>
+        {% if weather %}
+            <h2>{{ weather.city }}</h2>
+            <img class="weather-icon" src="{% static 'weather_app/icon.svg' %}" alt="Weather Icon">
+            <div class="temp">{{ weather.temperature }}°C</div>
+            <div class="wind">🌬️ Wind : {{ weather.wind_speed }} km/h</div>
+            <div class="humidity">💧 Humidity : {{ weather.humidity }} </div>
+        {% elif error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        <form method="get">
+            <input type="text" name="city" placeholder="Enter city" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>
